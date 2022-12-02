@@ -1,5 +1,4 @@
 #include <bits/stdc++.h>
-#include <cstdlib>
 using namespace std;
 
 const char CONVERT = 'X' - 'A';
@@ -15,13 +14,13 @@ int outcome(char p1, char p2)
 
 int main()
 {
-    char c1, c2;
+    char p1, p2;
     int total = 0;
 
-    while (scanf("%c %c\n", &c1, &c2) == 2)
+    while (scanf("%c %c\n", &p1, &p2) == 2)
     {
-        c1 += CONVERT;
-        total += c2 - 'X' + 1 + outcome(c1, c2);
+        p1 += CONVERT;
+        total += p2 - 'X' + 1 + outcome(p1, p2);
     }
 
     cout << total << "\n";

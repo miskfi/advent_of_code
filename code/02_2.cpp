@@ -1,5 +1,4 @@
 #include <bits/stdc++.h>
-#include <cstdlib>
 using namespace std;
 
 const char CONVERT = 'X' - 'A';
@@ -16,18 +15,18 @@ int outcome(char p1, char p2)
 
 int main()
 {
-    char c1, c2, strategy;
+    char p1, p2, strategy;
     int total = 0;
 
-    while (scanf("%c %c\n", &c1, &strategy) == 2)
+    while (scanf("%c %c\n", &p1, &strategy) == 2)
     {
-        c1 += CONVERT;
+        p1 += CONVERT;
 
-        if (strategy == 'Y') c2 = c1;
-        else if (strategy == 'Z') c2 = winning_shape[c1];
-        else c2 = winning_shape[winning_shape[c1]];
+        if (strategy == 'Y') p2 = p1;
+        else if (strategy == 'Z') p2 = winning_shape[p1];
+        else p2 = winning_shape[winning_shape[p1]];
 
-        total += c2 - 'X' + 1 + outcome(c1, c2);
+        total += p2 - 'X' + 1 + outcome(p1, p2);
     }
 
     cout << total << "\n";
