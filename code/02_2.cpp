@@ -2,7 +2,7 @@
 #include <cstdlib>
 using namespace std;
 
-const char CONVERT = 'Y' - 'A' - 1;
+const char CONVERT = 'X' - 'A';
 map<char, char> winning_shape = {{'Z', 'X'}, {'X', 'Y'}, {'Y', 'Z'}};
 
 /// @return 6 if p2 won, 3 if it's a draw, 0 if p1 won
