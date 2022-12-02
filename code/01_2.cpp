@@ -10,7 +10,7 @@ int main()
     string line;
     vector<int> elves;
 
-    while (std::getline(cin, line))
+    while (getline(cin, line))
     {
         if (line.empty())
         {
@@ -22,6 +22,6 @@ int main()
     }
 
     sort(elves.begin(), elves.end(), greater<int>());
-    std::cout << elves[0] + elves[1] + elves[2] << "\n";
+    cout << elves[0] + elves[1] + elves[2] << "\n";
     return 0;
 }

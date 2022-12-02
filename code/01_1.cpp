@@ -1,6 +1,4 @@
-#include <iostream>
-#include <string>
-#include <climits>
+#include <bits/stdc++.h>
 using namespace std;
 
 int main()
@@ -8,7 +6,7 @@ int main()
     int cur = 0, max = INT_MIN;
     string line;
 
-    while (std::getline(cin, line))
+    while (getline(cin, line))
     {
         if (line.empty())
         {
@@ -20,6 +18,6 @@ int main()
             cur += stoi(line);
     }
 
-    std::cout << max << "\n";
+    cout << max << "\n";
     return 0;
 }
