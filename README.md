@@ -1,0 +1,2 @@
+Hi, these are my Advent of Code solutions. Since I usually read the input from stdin, my solutions are split into two files.
+Yea, there's a lot of code copying, but I don't really wanna bother with opening files or storing the input for the second part.
