@@ -6,6 +6,7 @@ const string FILENAME = "../inputs/08.txt";
 vector<vector<int>> read_input()
 {
     ifstream file (FILENAME);
+    if (! file) throw std::invalid_argument("Input file doesn't exist");
 
     vector<vector<int>> trees;
     string line;
@@ -60,28 +61,28 @@ int get_view_score(const vector<vector<int>> & trees, int i, int j)
     // left
     for (int x = j-1; x >= 0; x--)
     {
-        if (trees[i][x] <= trees[i][j]) scores[0]++;
+        scores[0]++;
         if (trees[i][x] >= trees[i][j]) break;
     }
 
     // right
     for (int x = j+1; x < (int) trees[i].size(); x++)
     {
-        if (trees[i][x] <= trees[i][j]) scores[1]++;
+        scores[1]++;
         if (trees[i][x] >= trees[i][j]) break;
     }
 
     // up
     for (int x = i-1; x >= 0; x--)
     {
-        if (trees[x][j] <= trees[i][j]) scores[2]++;
+        scores[2]++;
         if (trees[x][j] >= trees[i][j]) break;
     }
 
     // down
     for (int x = i+1; x < (int) trees.size(); x++)
     {
-        if (trees[x][j] <= trees[i][j]) scores[3]++;
+        scores[3]++;
         if (trees[x][j] >= trees[i][j]) break;
     }
 
